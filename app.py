@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import SessionState
+import plotly.express as px
+import plotly.graph_objects as go
+
 
 st.write("""
 # Fault Detection App
@@ -43,9 +46,20 @@ else:
         input_df = input_df.reshape(input_df.shape[0],384)
 
     # Displays the user input features
-    st.subheader('Three Phase Electrical Signal')
+    st.subheader("Three Phases of Electric Current Signal")
 
-    st.write(input_df)
+    # Plotly Current Signal    
+    x=range(len(input_df[0, :128]))
+
+    fig1 = px.line(x=x, y=input_df[0, :128], color_discrete_sequence=['blue'])
+    fig2 = px.line(x=x, y=input_df[0, 128:256], color_discrete_sequence=['red'])
+    fig3 = px.line(x=x, y=input_df[0, 256:], color_discrete_sequence=['green'])
+
+    plot = go.Figure(data = fig1.data + fig2.data + fig3.data)
+
+    st.plotly_chart(plot)
+
+
 
     pred_button = st.button("Predict")
 
