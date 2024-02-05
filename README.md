@@ -6,5 +6,5 @@ You can test the API here: https://cnn-streamlit-app.onrender.com/
 In this repository you'll also find all the developing, optimization and training of the CNN1D used for the classification task. This model has a 96% accuracy in the dataset used.
 
 <p align="center">
-    <img width="200" src="images/neural_network.jpg">
+    <img width="900" src="images/neural_network.jpg">
 </p>
