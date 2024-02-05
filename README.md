@@ -1,4 +1,5 @@
-# API_test_cnn_2
+# CNN1D-Fault-Detection-API
+
 Test API for fault detection CNN, where you can upload a .csv file with a three-phase electric current signal in order to classify this signal as being normal or faulted.
 
 You can test the API here: https://cnn-streamlit-app.onrender.com/
